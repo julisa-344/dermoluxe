@@ -1,0 +1,16 @@
+@import '../../theme.scss';
+
+.btn-primary{
+    background-color: $color-primary;
+    font-family: 'Manrope';
+    font-weight: bolder;
+    color: $color-white;
+    padding: 12px 0;
+    min-width: 200px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color:$color-secondary;
+}
