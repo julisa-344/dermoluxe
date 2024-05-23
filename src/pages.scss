@@ -1,0 +1,22 @@
+.gallery-content{
+    display: flex;
+
+}
+.content-category{
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+.contet-products{
+    width: 60%;
+    margin: 0 auto;
+}
