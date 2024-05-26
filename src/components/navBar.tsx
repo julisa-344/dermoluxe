@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import './componentStyles/navBar.css';
-import { Icon, IconButton } from '@material-ui/core';
+import { IconButton } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Nav = () => {
   return (
@@ -16,17 +19,14 @@ const Nav = () => {
           </ul>
         </div>
         <div className='right-icons'>
-            <IconButton>
-                <Icon>Home</Icon>
+            <IconButton >
+                <HomeIcon />
             </IconButton>
-            <IconButton>
-                <Icon>Search</Icon>
+            <IconButton >
+                <SearchIcon />
             </IconButton>
-            <IconButton>
-                <Icon>Favorite</Icon>
-            </IconButton>
-            <IconButton>
-                <Icon>shopping_cart</Icon>
+            <IconButton >
+                <ShoppingCartIcon />
             </IconButton>
         </div>
     </nav>
