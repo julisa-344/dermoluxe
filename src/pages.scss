@@ -88,3 +88,30 @@
     outline: none;
     border: none;
 }
+
+.content-beneficios{
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px;
+    background-color: $color-primary-200;
+    flex-wrap: wrap;
+}
+
+.icon-benefices{
+    width: 40px;
+    margin-right: 8px;
+}
+.additional-info{
+    width: 100vw;
+}
+.content-info{
+    width: 300px;
+}
+.contend-info-products{
+    width: 40%;
+}
+
+.product-detail{
+    height: 80vh;
+    align-items: center;
+}

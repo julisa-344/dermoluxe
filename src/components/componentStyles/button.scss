@@ -30,3 +30,17 @@
     border: 1px solid $color-secondary;
     color: $color-secondary;    
 }
+.switch-btn{
+    background-color: transparent;
+    border: none;
+    color: $color-neutral-600;
+}
+
+.switch-btn:hover{
+    color: $color-primary;
+    border: none;
+}
+
+.btn-primary:active {
+    border: 1px solid black;
+}

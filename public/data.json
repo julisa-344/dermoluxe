@@ -6,7 +6,9 @@
         "brand": "Cerave",
         "category": "Skincare",
         "tags": ["moisturizer", "cream", "hydrating"],
-        "img": "../../public/img/product1.png"
+        "img": "../../public/img/product1.png",
+        "sale": false,
+        "description": "La crema hidratante CeraVe es una crema hidratante rica, no grasa y de rápida absorción con tres ceramidas esenciales que retienen la humedad de la piel y ayudan a mantener la barrera protectora de la piel."
     },
     {
         "id": 2,
@@ -15,7 +17,9 @@
         "brand": "Ponds",
         "category": "Skincare",
         "tags": ["cleanser", "makeup remover", "hydrating"],
-        "img": "public/img/product1.png"
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
     },
     {
         "id": 3,
@@ -24,7 +28,9 @@
         "brand": "Maybelline",
         "category": "Makeup",
         "tags": ["foundation", "liquid", "matte"],
-        "img": "public/img/product1.png"
+        "img": "public/img/product1.png",
+        "sale": false,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
     },
     {
         "id": 4,
@@ -33,7 +39,9 @@
         "brand": "L'Oreal",
         "category": "Makeup",
         "tags": ["mascara", "volumizing", "black"],
-        "img": "public/img/product1.png"
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
     },
     {
         "id": 5,
@@ -42,7 +50,9 @@
         "brand": "Neutrogena",
         "category": "Skincare",
         "tags": ["moisturizer", "gel", "hydrating"],
-        "img": "public/img/product1.png"
+        "img": "public/img/product1.png",
+        "sale": false,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
     },
     {
         "id": 6,
@@ -51,7 +61,9 @@
         "brand": "Revlon",
         "category": "Makeup",
         "tags": ["eyeliner", "liquid", "black"],
-        "img": "public/img/product1.png"
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Delineador líquido Revlon Colorstay"
     },
     {
         "id": 7,
@@ -60,7 +72,9 @@
         "brand": "PERRO",
         "category": "PERRO",
         "tags": ["cleanser", "gentle", "sensitive"],
-        "img": "public/img/product1.png"
+        "img": "public/img/product1.png",
+        "sale": false,
+        "description": "Descripción del producto PERRO"
     },
     {
         "id": 8,
@@ -69,7 +83,9 @@
         "brand": "Covergirl",
         "category": "Makeup",
         "tags": ["mascara", "volumizing", "black"],
-        "img": "public/img/product1.png"
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
     },
     {
         "id": 9,
@@ -78,7 +94,9 @@
         "brand": "Olay",
         "category": "Skincare",
         "tags": ["moisturizer", "cream", "anti-aging"],
-        "img": "public/img/product1.png"
+        "img": "public/img/product1.png",
+        "sale": false,
+        "description": "Crema hidratante Olay Regenerist Micro"
     },
     {
         "id": 10,
@@ -87,6 +105,8 @@
         "brand": "NYX",
         "category": "Makeup",
         "tags": ["lipstick", "matte", "cream"],
-        "img": "public/img/product1.png"
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Labial mate NYX Soft Matte"
     }
 ]

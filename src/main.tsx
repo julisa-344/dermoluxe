@@ -7,6 +7,7 @@ import RegisterPage from './pages/RegisterPage';
 import Promociones from './pages/PromocionesPage';
 import './index.css';
 import './theme.scss';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/shop" element={<GalleryPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/promotions" element={<Promociones/>} />
+        <Route path="/detail_product" element={<ProductDetailPage/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

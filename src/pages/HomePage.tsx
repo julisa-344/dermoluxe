@@ -1,7 +1,15 @@
 import '../pages.scss'
 import Card from '../components/card';
 import Button from '../components/button';
+import { useNavigate } from "react-router-dom";
+
 function HomePage() {
+    let navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate("/shop");
+      };
+
     return (
         <>
             <section className="hero flex">
@@ -11,7 +19,7 @@ function HomePage() {
                         Explora nuestra gama de productos y encuentra el tratamiento perfecto para tu tipo de piel.
                         ¡Compra Ahora y Disfruta de un 10% de Descuento en tu Primera Compra!
                     </p>
-                    <Button text="Ver productos" onClick={() => { }} />
+                    <Button text="Ver productos" onClick={handleButtonClick} />
                 </div>
                 <div className='content-img'>
                     <div className='border-img'>
