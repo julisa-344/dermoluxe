@@ -10,6 +10,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import './pagesStyles/loginSignup.css';
+import { Button } from '@mui/material';
 
 function LoginSignup() {
   const [loginEmail, setLoginEmail] = useState('');
