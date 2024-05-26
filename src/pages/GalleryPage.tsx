@@ -82,7 +82,7 @@ function GalleryPage() {
   return (
     <>
     <Nav/>
-          <section className="p-4">
+          <section className="p-4 contend-header">
         <section className="gallery-content">
           <aside>
             <h2 className="title">Filtros</h2>

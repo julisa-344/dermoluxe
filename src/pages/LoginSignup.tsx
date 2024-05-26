@@ -70,7 +70,7 @@ function LoginSignup() {
         <Typography variant="body1">&gt;</Typography>
         <Typography variant="body1">Login / SignUp</Typography>
       </Box>
-      <Box className="formsContainer" sx={{ display: 'flex', justifyContent: 'space-around' }}>
+      <Box className="formsContainer" sx={{ display: 'flex', justifyContent: 'space-around', padding:'24px' }}>
         <Box component="form" className="loginForm" onSubmit={handleLoginSubmit} sx={{ display: 'flex', flexDirection: 'column', width: 300, padding: 2, border: '1px solid #ccc', borderRadius: 1, backgroundColor: '#f9f9f9' }}>
           <Typography variant="h6" sx={{ marginBottom: 2 }}>Ingresar</Typography>
           <TextField 
@@ -89,16 +89,16 @@ function LoginSignup() {
             required
             sx={{ marginBottom: 2 }}
           />
-          <Button variant="contained" type="submit" sx={{ marginBottom: 2 }}>Iniciar sesión</Button>
+          <Button  className='btn' variant="contained" type="submit" sx={{ marginBottom: 2 }}>Iniciar sesión</Button>
           <Button 
+          className='btn-outline-primary'
             variant="contained" 
-            color="secondary" 
             onClick={handleGoogleLogin}
             startIcon={<img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" className="google-logo" />}
             sx={{ marginBottom: 2 }}
           >
             Iniciar sesión con Google
-          </Button>
+          </Button >
           <Typography variant="body2">¿Olvidaste tu contraseña?</Typography>
         </Box>
         <Box component="form" className="signupForm" onSubmit={handleSignupSubmit} sx={{ display: 'flex', flexDirection: 'column', width: 300, padding: 2, border: '1px solid #ccc', borderRadius: 1, backgroundColor: '#f9f9f9' }}>
@@ -143,7 +143,7 @@ function LoginSignup() {
             required
             sx={{ marginBottom: 2 }}
           />
-          <Button variant="contained" type="submit">Registrarse</Button>
+          <Button className='btn' variant="contained" type="submit">Registrarse</Button>
         </Box>
       </Box>
       {error && <Typography variant="body2" color="error" sx={{ textAlign: 'center', marginTop: 2 }}>{error}</Typography>}

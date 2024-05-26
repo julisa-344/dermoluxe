@@ -1,13 +1,19 @@
+.contend-header{
+}
 .loginHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  background-color: #1e2c30;
+color: white;
+  padding: 20px;
+
 }
 
 .loginHeader a {
   text-decoration: none;
-  color: #007BFF;
+  color: white;
   margin-right: 5px;
 }
 
@@ -19,4 +25,13 @@
 .google-logo {
   width: 20px;
   height: 20px;
+}
+.btn{
+  background-color: #5c8692 !important;
+}
+
+.btn-outline-primary {
+  color: #5c8692 !important;
+  border:1px solid  #5c8692 !important;
+  background-color: transparent !important;
 }
