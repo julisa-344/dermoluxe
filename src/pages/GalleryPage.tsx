@@ -41,7 +41,6 @@ function GalleryPage() {
       const products = await data.json();
       setProducts(products);
     };
-
     // The data.json file is located in the public folder
 
     fetchData();
@@ -122,7 +121,7 @@ function GalleryPage() {
               </md-outlined-text-field> */}
               <div className="input-search">
               <input
-              className="input-transparent"
+                className="input-transparent"
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
