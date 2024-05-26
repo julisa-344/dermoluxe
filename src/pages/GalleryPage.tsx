@@ -56,7 +56,6 @@ function GalleryPage() {
   );
 
   const handleCategoryChange = (category: string, isChecked: boolean) => {
-    console.log('perrrro', category, isChecked)
     if (isChecked) {
       setSelectedCategories((prev) => [...prev, category]);
     } else {

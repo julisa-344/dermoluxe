@@ -67,14 +67,14 @@
     },
     {
         "id": 7,
-        "name": "PERRO",
+        "name": "Bloqueador ISDIN",
         "price": 900.99,
-        "brand": "PERRO",
-        "category": "PERRO",
+        "brand": "Neutrogena",
+        "category": "Bloqueador",
         "tags": ["cleanser", "gentle", "sensitive"],
         "img": "public/img/product1.png",
         "sale": false,
-        "description": "Descripción del producto PERRO"
+        "description": "Bloqueador ISDIN 100 SPF"
     },
     {
         "id": 8,
