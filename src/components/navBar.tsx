@@ -5,7 +5,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const Nav = () => {
+function Nav() {
   return (
     <nav>
         <div className='Logo'>
@@ -31,6 +31,6 @@ const Nav = () => {
         </div>
     </nav>
   );
-};
+}
 
 export default Nav;
