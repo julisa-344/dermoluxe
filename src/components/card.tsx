@@ -1,7 +1,6 @@
 import './componentStyles/card.scss';
 import Button from './button';
 import './../theme.scss';
-import { useState } from 'react';
 
 type CardProps = {
     img: string;

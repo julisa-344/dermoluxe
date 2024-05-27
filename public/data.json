@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Cerave Moisturizing Cream",
+        "price": 12.99,
+        "brand": "Cerave",
+        "category": "Skincare",
+        "tags": ["moisturizer", "cream", "hydrating"],
+        "image": "public/img/product1.png"
+    },
+    {
+        "id": 2,
+        "name": "Ponds Cold Cream Cleanser",
+        "price": 8.99,
+        "brand": "Ponds",
+        "category": "Skincare",
+        "tags": ["cleanser", "makeup remover", "hydrating"],
+        "image": "public/img/product1.png"
+    },
+    {
+        "id": 3,
+        "name": "Maybelline Fit Me Foundation",
+        "price": 9.99,
+        "brand": "Maybelline",
+        "category": "Makeup",
+        "tags": ["foundation", "liquid", "matte"],
+        "image": "public/img/product1.png"
+    },
+    {
+        "id": 4,
+        "name": "L'Oreal Voluminous Mascara",
+        "price": 7.99,
+        "brand": "L'Oreal",
+        "category": "Makeup",
+        "tags": ["mascara", "volumizing", "black"],
+        "image": "public/img/product1.png"
+    },
+    {
+        "id": 5,
+        "name": "Neutrogena Hydro Boost Gel Cream",
+        "price": 19.99,
+        "brand": "Neutrogena",
+        "category": "Skincare",
+        "tags": ["moisturizer", "gel", "hydrating"],
+        "image": "public/img/product1.png"
+    },
+    {
+        "id": 6,
+        "name": "Revlon Colorstay Liquid Eyeliner",
+        "price": 6.99,
+        "brand": "Revlon",
+        "category": "Makeup",
+        "tags": ["eyeliner", "liquid", "black"],
+        "image": "public/img/product1.png"
+    },
+    {
+        "id": 7,
+        "name": "PERRO",
+        "price": 900.99,
+        "brand": "PERRO",
+        "category": "PERRO",
+        "tags": ["cleanser", "gentle", "sensitive"],
+        "image": "public/img/product1.png"
+    },
+    {
+        "id": 8,
+        "name": "Covergirl Lash Blast Mascara",
+        "price": 8.99,
+        "brand": "Covergirl",
+        "category": "Makeup",
+        "tags": ["mascara", "volumizing", "black"],
+        "image": "public/img/product1.png"
+    },
+    {
+        "id": 9,
+        "name": "Olay Regenerist Micro-Sculpting Cream",
+        "price": 24.99,
+        "brand": "Olay",
+        "category": "Skincare",
+        "tags": ["moisturizer", "cream", "anti-aging"],
+        "image": "public/img/product1.png"
+    },
+    {
+        "id": 10,
+        "name": "NYX Soft Matte Lip Cream",
+        "price": 6.99,
+        "brand": "NYX",
+        "category": "Makeup",
+        "tags": ["lipstick", "matte", "cream"],
+        "image": "public/img/product1.png"
+    }
+]

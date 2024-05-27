@@ -1,102 +1,152 @@
-import '../pages.scss';
-import '../theme.scss'
+import "../pages.scss";
+import "../theme.scss";
 import Card from "../components/card";
-import Button from "../components/button";
-/**
- * @license
- * Copyright 2023 Google LLC
- * SPDX-License-Identifier: Apache-2.0
- */
+import "firebase/firestore";
+import { useEffect, useState } from "react";
 
-import '@material/web/checkbox/checkbox.js';
-import '@material/web/textfield/filled-text-field.js';
-import '@material/web/textfield/outlined-text-field.js';
-import '@material/web/select/outlined-select.js';
-import '@material/web/select/select-option.js';
 
-/** Knob types for checkbox stories. */
-export interface StoryKnobs {
-    checked: boolean;
-    disabled: boolean;
-    indeterminate: boolean;
+import { Checkbox } from "@mui/material";
+
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  img: string;
+  category: string;
+  brand: string;
 }
-
 
 function GalleryPage() {
-    const disabled = false;
-    return (
-        <>
-            <section className='p-4'>
+  const [products, setProducts] = useState<Product[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
 
-                <section className='gallery-content'>
-                    <aside>
-                        <h2 className='title'>Filtros</h2>
-                        <p className='sub-title'>Por categoría</p>
-                        <div className="content-category">
-                            <label className='flex align-center'>
-                                <md-checkbox touch-target="wrapper"></md-checkbox>
-                                Checkbox one
-                            </label>
-                            <label>
-                                <md-checkbox touch-target="wrapper"></md-checkbox>
-                                Checkbox one
-                            </label>
-                            <label>
-                                <md-checkbox touch-target="wrapper"></md-checkbox>
-                                Checkbox one
-                            </label>
-                        </div>
-                        <p className='sub-title'>Por marca</p>
-                        <div className="content-category">
-                            <label>
-                                <md-checkbox touch-target="wrapper"></md-checkbox>
-                                Checkbox one
-                            </label>
-                            <label>
-                                <md-checkbox touch-target="wrapper"></md-checkbox>
-                                Checkbox one
-                            </label>
-                            <label>
-                                <md-checkbox touch-target="wrapper"></md-checkbox>
-                                Checkbox one
-                            </label>
-                        </div>
-                    </aside >
-                    <section className='contet-products'>
-                        <div className='flex justify-between mb-4'>
-                            <md-outlined-text-field placeholder="Search for messages">
-                                <md-icon slot="leading-icon">search</md-icon>
-                            </md-outlined-text-field>
+  /*
+  useEffect(() => {
+    const fetchData = async () => {
+      const db = firebase.firestore();
+      const data = await db.collection("beautyProducts").get();
+      setProducts(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+    };
+    fetchData();
+  }, []); */
 
+//   as we currently do not have the firebase database, we will use a mock data (data.json) to simulate the data
 
-                            <md-outlined-select>
-                                <md-select-option selected value="Relevancia">
-                                    <div slot="headline">relevancia</div>
-                                </md-select-option>
-                                <md-select-option value="menor precio">
-                                    <div slot="headline">menor precio</div>
-                                </md-select-option>
-                            </md-outlined-select>
+    useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("data.json");
+      const products = await data.json();
+      setProducts(products);
+    };
 
-                        </div>
-                        <div className='content-card'>
-                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                        </div>
-                        <div className='w-max flex justify-center m-4'>
-                            <Button text='Ver más' onClick={() => { }} type='outline'/>
-                        </div>
-                    </section>
-                </section>
-            </section>
-        </>
-    );
+    // The data.json file is located in the public folder
+
+    fetchData();
+  }, []);
+
+  const filteredProducts = products.filter(
+    (product) =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      (selectedCategories.length === 0 ||
+        selectedCategories.includes(product.category)) &&
+      (selectedBrands.length === 0 || selectedBrands.includes(product.brand))
+  );
+
+  const handleCategoryChange = (category: string, isChecked: boolean) => {
+    console.log('perrrro', category, isChecked)
+    if (isChecked) {
+      setSelectedCategories((prev) => [...prev, category]);
+    } else {
+      setSelectedCategories((prev) => prev.filter((c) => c !== category));
+    }
+  };
+
+  const handleBrandChange = (brand: string, isChecked: boolean) => {
+    if (isChecked) {
+      setSelectedBrands((prev) => [...prev, brand]);
+    } else {
+      setSelectedBrands((prev) => prev.filter((b) => b !== brand));
+    }
+  };
+
+  const categories = products
+    .map((product) => product.category)
+    .filter((value, index, self) => self.indexOf(value) === index);
+
+  const brands = products
+    .map((product) => product.brand)
+    .filter((value, index, self) => self.indexOf(value) === index);
+
+  return (
+    <>
+      <section className="p-4">
+        <section className="gallery-content">
+          <aside>
+            <h2 className="name">Filtros</h2>
+            <p className="sub-name">Por categoría</p>
+            <div className="content-category"> 
+            {/* Search for categoruy */}
+              {categories.map((category) => (
+                <label key={category}>
+                  <Checkbox
+                    checked={selectedCategories.includes(category)}
+                    onChange={(e) =>
+                      handleCategoryChange(category, e.target.checked)
+                    } />
+                  {category}
+                </label>
+              ))}
+            </div>
+            <p className="sub-name">Por marca</p>
+            <div className="content-category">
+              {/* Search for brand */}
+                {brands.map((brand) => (
+                    <label key={brand}>
+                    <Checkbox
+                        touch-target="wrapper"
+                        onChange={(e) => handleBrandChange(brand, e.target.checked)}
+                    />
+                    {brand}
+                    </label>
+                ))}
+              
+            </div>
+          </aside>
+          <section className="contet-products">
+            <div className="flex justify-between mb-4">
+              {/* <md-outlined-text-field placeholder="Search for messages">
+                <md-icon slot="leading-icon">search</md-icon>
+              </md-outlined-text-field> */}
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <div className="flex">
+                <span>Ordenar por:</span>
+                <select>
+                  <option>Menor precio</option>
+                  <option>Mayor precio</option>
+                </select>
+                </div>
+            </div>
+            <div className="content-card">
+              {filteredProducts.map((product: Product) => (
+                <Card
+                  key={product.id}
+                  title={product.name}
+                  price={product.price.toString()}
+                  img={product.img}
+                  // falta hacer el fix de la imagen
+                />
+              ))}
+            </div>
+          </section>
+        </section>
+      </section>
+    </>
+  );
 }
-export default GalleryPage
+export default GalleryPage;

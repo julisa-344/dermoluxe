@@ -10,13 +10,11 @@ type InputProps = {
     label?: string;
     placeholder: string;
 };
-function Input({label, placeholder}: InputProps) {
+function Input({label}: InputProps) {
   return (
     <>
         <div className='input-content'>
             <label htmlFor="">{label}</label>
-            <md-outlined-text-field label={placeholder}>
-            </md-outlined-text-field>
         </div>
     </>
   );
