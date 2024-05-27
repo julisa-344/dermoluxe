@@ -1,12 +1,10 @@
 import './../theme.scss';
-import Input from './../components/input';
 import { Checkbox, Icon, IconButton, TextField } from '@mui/material';
 function RegisterPage() {
     return (
         <>
             <section>
                 <h2 className="title">Log in</h2>
-                <Input placeholder="usuario@gmail.com" />
 
                 <TextField label="Password" type="password">
                     <IconButton slot="trailing-icon">

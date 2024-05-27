@@ -3,9 +3,9 @@ import "../theme.scss";
 import Card from "../components/card";
 import "firebase/firestore";
 import { useEffect, useState } from "react";
-
-
 import { Checkbox } from "@mui/material";
+import Nav from "../components/navBar";
+import Footer from "../components/footer";
 
 interface Product {
   id: string;
@@ -81,7 +81,7 @@ function GalleryPage() {
 
   return (
     <>
-      <section className="p-4">
+          <section className="p-4">
         <section className="gallery-content">
           <aside>
             <h2 className="name">Filtros</h2>

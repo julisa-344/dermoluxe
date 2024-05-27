@@ -29,6 +29,7 @@ function HomePage() {
                 <p className='text color-white'>¡Ingresa tu correo electrónico para estar al día de nuestras novedades!</p>
                 <Button text="Suscribirme" onClick={() => { }} />
             </section>
+
         </>
     )
 }

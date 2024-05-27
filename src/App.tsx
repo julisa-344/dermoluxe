@@ -1,22 +1,18 @@
 import './App.css';
+import HomePage from './pages/HomePage';
 import'./theme.scss';
-
 import Nav from './components/navBar';
 import Footer from './components/footer';
-// import RegisterPage from './pages/RegisterPage';
-import GalleryPage from './pages/GalleryPage';
-import HomePage from './pages/HomePage';
-function App() {
 
+function App() {
   return (
     <>
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300" rel="stylesheet" />
       <Nav />
-      <GalleryPage />
-      <Footer />
-
+      <HomePage />
+      <Footer/>
     </>
   )
 }
 
-export default App
+export default App;
