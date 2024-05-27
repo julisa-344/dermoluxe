@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './componentStyles/navBar.css';
-import { Icon, IconButton } from '@mui/material';
+import { Icon, IconButton } from '@material-ui/core';
 
 const Nav = () => {
   return (
