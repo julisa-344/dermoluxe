@@ -1,6 +1,7 @@
 import '../pages.scss';
 import '../theme.scss'
 import Card from "../components/card";
+import Button from "../components/button";
 /**
  * @license
  * Copyright 2023 Google LLC
@@ -25,73 +26,76 @@ function GalleryPage() {
     const disabled = false;
     return (
         <>
-        <section className='p-4'>
+            <section className='p-4'>
 
-            <section className='gallery-content'>
-                <aside>
-                    <h2 className='title'>Filtros</h2>
-                    <p className='sub-title'>Por categoría</p>
-                    <div className="content-category">
-                    <label>
-                        <md-checkbox touch-target="wrapper"></md-checkbox>
-                        Checkbox one
-                    </label>
-                    <label>
-                        <md-checkbox touch-target="wrapper"></md-checkbox>
-                        Checkbox one
-                    </label>
-                    <label>
-                        <md-checkbox touch-target="wrapper"></md-checkbox>
-                        Checkbox one
-                    </label>
-                    </div>
-                    <p className='sub-title'>Por marca</p>
-                    <div className="content-category">
-                        <label>
-                            <md-checkbox touch-target="wrapper"></md-checkbox>
-                            Checkbox one
-                        </label>
-                        <label>
-                            <md-checkbox touch-target="wrapper"></md-checkbox>
-                            Checkbox one
-                        </label>
-                        <label>
-                            <md-checkbox touch-target="wrapper"></md-checkbox>
-                            Checkbox one
-                        </label>
+                <section className='gallery-content'>
+                    <aside>
+                        <h2 className='title'>Filtros</h2>
+                        <p className='sub-title'>Por categoría</p>
+                        <div className="content-category">
+                            <label className='flex align-center'>
+                                <md-checkbox touch-target="wrapper"></md-checkbox>
+                                Checkbox one
+                            </label>
+                            <label>
+                                <md-checkbox touch-target="wrapper"></md-checkbox>
+                                Checkbox one
+                            </label>
+                            <label>
+                                <md-checkbox touch-target="wrapper"></md-checkbox>
+                                Checkbox one
+                            </label>
                         </div>
-                </aside >
-                <section className='contet-products'>
-                <div className='flex justify-between mb-4'>
-                <md-outlined-text-field placeholder="Search for messages">
-                    <md-icon slot="leading-icon">search</md-icon>
-                </md-outlined-text-field>
+                        <p className='sub-title'>Por marca</p>
+                        <div className="content-category">
+                            <label>
+                                <md-checkbox touch-target="wrapper"></md-checkbox>
+                                Checkbox one
+                            </label>
+                            <label>
+                                <md-checkbox touch-target="wrapper"></md-checkbox>
+                                Checkbox one
+                            </label>
+                            <label>
+                                <md-checkbox touch-target="wrapper"></md-checkbox>
+                                Checkbox one
+                            </label>
+                        </div>
+                    </aside >
+                    <section className='contet-products'>
+                        <div className='flex justify-between mb-4'>
+                            <md-outlined-text-field placeholder="Search for messages">
+                                <md-icon slot="leading-icon">search</md-icon>
+                            </md-outlined-text-field>
 
 
-                <md-outlined-select>
-                <md-select-option selected value="Relevancia">
-                    <div slot="headline">relevancia</div>
-                </md-select-option>
-                <md-select-option value="menor precio">
-                    <div slot="headline">menor precio</div>
-                </md-select-option>
-                </md-outlined-select>
+                            <md-outlined-select>
+                                <md-select-option selected value="Relevancia">
+                                    <div slot="headline">relevancia</div>
+                                </md-select-option>
+                                <md-select-option value="menor precio">
+                                    <div slot="headline">menor precio</div>
+                                </md-select-option>
+                            </md-outlined-select>
 
-            </div>
-            <div className='content-card'>
-            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                    <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                    <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                    <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                    <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                    <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                    <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                    <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-                    <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
-            </div>
+                        </div>
+                        <div className='content-card'>
+                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
+                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
+                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
+                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
+                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
+                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
+                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
+                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
+                            <Card title="Product" price="s/ 99" img="../public/img/product1.png" />
+                        </div>
+                        <div className='w-max flex justify-center m-4'>
+                            <Button text='Ver más' onClick={() => { }} type='outline'/>
+                        </div>
+                    </section>
                 </section>
             </section>
-        </section>
         </>
     );
 }

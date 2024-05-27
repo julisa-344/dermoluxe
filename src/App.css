@@ -32,6 +32,23 @@ body {
 .p-4{
   padding: 1.5rem;
 }
+.m-4{
+  margin: 1.5rem;
+}
+.m-6{
+  margin: 2.5rem;
+}
 .mb-4{
   margin-bottom: 1.5rem;
+}
+.w-max{
+  width: 100%;
+}
+
+.margin-auto{
+  margin: 0 auto;
+}
+
+.color-white{
+  color: #fff !important;
 }

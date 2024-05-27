@@ -1,5 +1,14 @@
 @import '../../theme.scss';
+.btn-common{
+    font-family: 'Manrope';
+    font-weight: bolder;
+    padding: 12px 0;
+    min-width: 200px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
 
+}
 .btn-primary{
     background-color: $color-primary;
     font-family: 'Manrope';
@@ -13,4 +22,9 @@
 }
 .btn-primary:hover{
     background-color:$color-secondary;
+}
+.btn-outline{
+    background-color: $color-white;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;    
 }

@@ -5,6 +5,7 @@ import Nav from './components/navBar';
 import Footer from './components/footer';
 import RegisterPage from './pages/RegisterPage';
 import GalleryPage from './pages/GalleryPage';
+import HomePage from './pages/HomePage';
 function App() {
 
   return (
