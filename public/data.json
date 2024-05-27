@@ -6,7 +6,7 @@
         "brand": "Cerave",
         "category": "Skincare",
         "tags": ["moisturizer", "cream", "hydrating"],
-        "image": "public/img/product1.png"
+        "img": "../../public/img/product1.png"
     },
     {
         "id": 2,
@@ -15,16 +15,16 @@
         "brand": "Ponds",
         "category": "Skincare",
         "tags": ["cleanser", "makeup remover", "hydrating"],
-        "image": "public/img/product1.png"
+        "img": "public/img/product1.png"
     },
     {
         "id": 3,
-        "name": "Maybelline Fit Me Foundation",
+        "name": "Maybelline Fit Me",
         "price": 9.99,
         "brand": "Maybelline",
         "category": "Makeup",
         "tags": ["foundation", "liquid", "matte"],
-        "image": "public/img/product1.png"
+        "img": "public/img/product1.png"
     },
     {
         "id": 4,
@@ -33,25 +33,25 @@
         "brand": "L'Oreal",
         "category": "Makeup",
         "tags": ["mascara", "volumizing", "black"],
-        "image": "public/img/product1.png"
+        "img": "public/img/product1.png"
     },
     {
         "id": 5,
-        "name": "Neutrogena Hydro Boost Gel Cream",
+        "name": "Neutrogena Hydro Boost ",
         "price": 19.99,
         "brand": "Neutrogena",
         "category": "Skincare",
         "tags": ["moisturizer", "gel", "hydrating"],
-        "image": "public/img/product1.png"
+        "img": "public/img/product1.png"
     },
     {
         "id": 6,
-        "name": "Revlon Colorstay Liquid Eyeliner",
+        "name": "Revlon Colorstay Liquid",
         "price": 6.99,
         "brand": "Revlon",
         "category": "Makeup",
         "tags": ["eyeliner", "liquid", "black"],
-        "image": "public/img/product1.png"
+        "img": "public/img/product1.png"
     },
     {
         "id": 7,
@@ -60,33 +60,33 @@
         "brand": "PERRO",
         "category": "PERRO",
         "tags": ["cleanser", "gentle", "sensitive"],
-        "image": "public/img/product1.png"
+        "img": "public/img/product1.png"
     },
     {
         "id": 8,
-        "name": "Covergirl Lash Blast Mascara",
+        "name": "Covergirl Lash Blast",
         "price": 8.99,
         "brand": "Covergirl",
         "category": "Makeup",
         "tags": ["mascara", "volumizing", "black"],
-        "image": "public/img/product1.png"
+        "img": "public/img/product1.png"
     },
     {
         "id": 9,
-        "name": "Olay Regenerist Micro-Sculpting Cream",
+        "name": "Olay Regenerist Micro",
         "price": 24.99,
         "brand": "Olay",
         "category": "Skincare",
         "tags": ["moisturizer", "cream", "anti-aging"],
-        "image": "public/img/product1.png"
+        "img": "public/img/product1.png"
     },
     {
         "id": 10,
-        "name": "NYX Soft Matte Lip Cream",
+        "name": "NYX Soft Matte Lip",
         "price": 6.99,
         "brand": "NYX",
         "category": "Makeup",
         "tags": ["lipstick", "matte", "cream"],
-        "image": "public/img/product1.png"
+        "img": "public/img/product1.png"
     }
 ]

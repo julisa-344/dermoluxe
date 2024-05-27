@@ -9,9 +9,8 @@ type CardProps = {
 };
 
 function Card({ img, title, price }: CardProps) {
-
     return (
-        <div className="card">
+        <div className="card" >
             <img className='img-product' src={img} alt="producto" />
             <h3 className='sub-title'>{title}</h3>
             <p className='text'>{price}</p>

@@ -2,6 +2,7 @@ import "../pages.scss";
 import "../theme.scss";
 import Card from "../components/card";
 import "firebase/firestore";
+import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
 import { Checkbox } from "@mui/material";
 import Nav from "../components/navBar";
@@ -81,11 +82,12 @@ function GalleryPage() {
 
   return (
     <>
+    <Nav/>
           <section className="p-4">
         <section className="gallery-content">
           <aside>
-            <h2 className="name">Filtros</h2>
-            <p className="sub-name">Por categoría</p>
+            <h2 className="title">Filtros</h2>
+            <p className="sub-title">Por categoría</p>
             <div className="content-category"> 
             {/* Search for categoruy */}
               {categories.map((category) => (
@@ -99,7 +101,7 @@ function GalleryPage() {
                 </label>
               ))}
             </div>
-            <p className="sub-name">Por marca</p>
+            <p className="sub-title">Por marca</p>
             <div className="content-category">
               {/* Search for brand */}
                 {brands.map((brand) => (
@@ -115,18 +117,22 @@ function GalleryPage() {
             </div>
           </aside>
           <section className="contet-products">
-            <div className="flex justify-between mb-4">
+            <div className="flex justify-between align-center mb-4">
               {/* <md-outlined-text-field placeholder="Search for messages">
                 <md-icon slot="leading-icon">search</md-icon>
               </md-outlined-text-field> */}
+              <div className="input-search">
               <input
+              className="input-transparent"
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <div className="flex">
-                <span>Ordenar por:</span>
-                <select>
+              <SearchIcon />
+              </div>
+              <div className="flex align-center">
+                <span className="sub-title p-4">Ordenar por:</span>
+                <select className="p-2">
                   <option>Menor precio</option>
                   <option>Mayor precio</option>
                 </select>
@@ -146,6 +152,7 @@ function GalleryPage() {
           </section>
         </section>
       </section>
+      <Footer/>
     </>
   );
 }

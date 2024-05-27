@@ -15,7 +15,6 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 24px;
 }
 .contet-products{
@@ -66,4 +65,26 @@
 .form-home{
     background-color: $color-secondary;
     padding: 3rem 4rem;
+}
+
+.input-search{
+    width: 70%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $color-secondary;
+    border-radius: 8px;
+    padding: 0 16px;
+}
+
+.input-transparent{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: $color-neutral-600;
+}
+.input-transparent:focus {
+    outline: none;
+    border: none;
 }

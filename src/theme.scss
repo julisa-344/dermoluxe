@@ -36,6 +36,17 @@
 
     $color-error: #b00020;
     $color-on-error: #ffffff;
+
+    .tittle-main{
+        font-size: 48px;
+        color: $color-neutral-600;
+        font-family: 'Manrope';
+        font-weight: bold;
+        margin-bottom: 8px;
+        text-align: center;
+        color: $color-primary;
+    
+    }
 .title{
         font-size: 24px;
         font-weight: 500;
