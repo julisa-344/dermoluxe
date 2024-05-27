@@ -1,5 +1,6 @@
 import './../theme.scss';
 import Input from './../components/input';
+import { Checkbox, Icon, IconButton, TextField } from '@mui/material';
 function RegisterPage() {
     return (
         <>
@@ -7,14 +8,15 @@ function RegisterPage() {
                 <h2 className="title">Log in</h2>
                 <Input placeholder="usuario@gmail.com" />
 
-                <md-outlined-text-field label="Password" type="password">
-                    <md-icon-button toggle slot="trailing-icon">
-                        <md-icon>visibility</md-icon>
-                        <md-icon slot="selected">visibility_off</md-icon>
-                    </md-icon-button>
-                </md-outlined-text-field>
+                <TextField label="Password" type="password">
+                    <IconButton slot="trailing-icon">
+                        {/* se le quito el toggle btw */}
+                        <Icon>visibility</Icon>
+                        <Icon slot="selected">visibility_off</Icon>
+                    </IconButton>
+                </TextField>
 
-                <md-checkbox touch-target="wrapper" checked></md-checkbox>
+                <Checkbox touch-target="wrapper" checked></Checkbox>
             </section>
             <section>
                 

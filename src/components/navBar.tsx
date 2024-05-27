@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
-import '@material/web/button/filled-button.js';
-import '@material/web/iconbutton/filled-icon-button.js';
-import '@material/web/icon/icon.js';
 import './componentStyles/navBar.css';
+import { Icon, IconButton } from '@mui/material';
 
 const Nav = () => {
   return (
@@ -18,18 +16,18 @@ const Nav = () => {
           </ul>
         </div>
         <div className='right-icons'>
-            <md-filled-icon-button>
-                <md-icon>Home</md-icon>
-            </md-filled-icon-button>
-            <md-filled-icon-button>
-                <md-icon>Search</md-icon>
-            </md-filled-icon-button>
-            <md-filled-icon-button>
-                <md-icon>Favorite</md-icon>
-            </md-filled-icon-button>
-            <md-filled-icon-button>
-                <md-icon>shopping_cart</md-icon>
-            </md-filled-icon-button>
+            <IconButton>
+                <Icon>Home</Icon>
+            </IconButton>
+            <IconButton>
+                <Icon>Search</Icon>
+            </IconButton>
+            <IconButton>
+                <Icon>Favorite</Icon>
+            </IconButton>
+            <IconButton>
+                <Icon>shopping_cart</Icon>
+            </IconButton>
         </div>
     </nav>
   );
