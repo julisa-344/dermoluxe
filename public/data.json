@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "Cerave Moisturizing Cream",
+        "price": 12.99,
+        "brand": "Cerave",
+        "category": "Skincare",
+        "tags": ["moisturizer", "cream", "hydrating"],
+        "img": "../../public/img/product1.png",
+        "sale": false,
+        "description": "La crema hidratante CeraVe es una crema hidratante rica, no grasa y de rápida absorción con tres ceramidas esenciales que retienen la humedad de la piel y ayudan a mantener la barrera protectora de la piel."
+    },
+    {
+        "id": 2,
+        "name": "Ponds Cold Cream Cleanser",
+        "price": 8.99,
+        "brand": "Ponds",
+        "category": "Skincare",
+        "tags": ["cleanser", "makeup remover", "hydrating"],
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
+    },
+    {
+        "id": 3,
+        "name": "Maybelline Fit Me",
+        "price": 9.99,
+        "brand": "Maybelline",
+        "category": "Makeup",
+        "tags": ["foundation", "liquid", "matte"],
+        "img": "public/img/product1.png",
+        "sale": false,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
+    },
+    {
+        "id": 4,
+        "name": "L'Oreal Voluminous Mascara",
+        "price": 7.99,
+        "brand": "L'Oreal",
+        "category": "Makeup",
+        "tags": ["mascara", "volumizing", "black"],
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
+    },
+    {
+        "id": 5,
+        "name": "Neutrogena Hydro Boost ",
+        "price": 19.99,
+        "brand": "Neutrogena",
+        "category": "Skincare",
+        "tags": ["moisturizer", "gel", "hydrating"],
+        "img": "public/img/product1.png",
+        "sale": false,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
+    },
+    {
+        "id": 6,
+        "name": "Revlon Colorstay Liquid",
+        "price": 6.99,
+        "brand": "Revlon",
+        "category": "Makeup",
+        "tags": ["eyeliner", "liquid", "black"],
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Delineador líquido Revlon Colorstay"
+    },
+    {
+        "id": 7,
+        "name": "PERRO",
+        "price": 900.99,
+        "brand": "PERRO",
+        "category": "PERRO",
+        "tags": ["cleanser", "gentle", "sensitive"],
+        "img": "public/img/product1.png",
+        "sale": false,
+        "description": "Descripción del producto PERRO"
+    },
+    {
+        "id": 8,
+        "name": "Covergirl Lash Blast",
+        "price": 8.99,
+        "brand": "Covergirl",
+        "category": "Makeup",
+        "tags": ["mascara", "volumizing", "black"],
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Máscara voluminizadora Covergirl Lash Blast"
+    },
+    {
+        "id": 9,
+        "name": "Olay Regenerist Micro",
+        "price": 24.99,
+        "brand": "Olay",
+        "category": "Skincare",
+        "tags": ["moisturizer", "cream", "anti-aging"],
+        "img": "public/img/product1.png",
+        "sale": false,
+        "description": "Crema hidratante Olay Regenerist Micro"
+    },
+    {
+        "id": 10,
+        "name": "NYX Soft Matte Lip",
+        "price": 6.99,
+        "brand": "NYX",
+        "category": "Makeup",
+        "tags": ["lipstick", "matte", "cream"],
+        "img": "public/img/product1.png",
+        "sale": true,
+        "description": "Labial mate NYX Soft Matte"
+    }
+]

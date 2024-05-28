@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { loginWithEmail, registerWithEmail } from '../auth';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import Nav from '../components/navBar';
+import Footer from '../components/footer';
 import { auth } from '../firebaseConfig';
-import '@material/web/button/filled-button.js';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import './pagesStyles/loginSignup.css';
 
 function LoginSignup() {
@@ -21,7 +26,7 @@ function LoginSignup() {
     try {
       const result = await signInWithPopup(auth, provider);
       console.log('User logged in:', result.user);
-      // Falta código para redirigir post login
+      // Redirigir al usuario o mostrar un mensaje de éxito
     } catch (error) {
       console.error('Error logging in with Google:', error);
       setError('Error al iniciar sesión con Google. Inténtalo de nuevo.');
@@ -58,77 +63,91 @@ function LoginSignup() {
 
   return (
     <>
-      <div className="loginHeader">
-        <h1>Mi cuenta</h1>
+      <Nav />
+      <Box className="loginHeader" sx={{ textAlign: 'center', marginBottom: 2 }}>
+        <Typography variant="h4">Mi cuenta</Typography>
         <Link to='/'>Inicio</Link>
-        <p>&gt;</p>
-        <p>Login / SignUp</p>
-      </div>
-      <div className="formsContainer">
-        <form className="loginForm" onSubmit={handleLoginSubmit}>
-          <h3>Ingresar</h3>
-          <label>Email:</label>
-          <input 
-            type="email" 
-            value={loginEmail} 
-            onChange={(e) => setLoginEmail(e.target.value)} 
-            required 
+        <Typography variant="body1">&gt;</Typography>
+        <Typography variant="body1">Login / SignUp</Typography>
+      </Box>
+      <Box className="formsContainer" sx={{ display: 'flex', justifyContent: 'space-around' }}>
+        <Box component="form" className="loginForm" onSubmit={handleLoginSubmit} sx={{ display: 'flex', flexDirection: 'column', width: 300, padding: 2, border: '1px solid #ccc', borderRadius: 1, backgroundColor: '#f9f9f9' }}>
+          <Typography variant="h6" sx={{ marginBottom: 2 }}>Ingresar</Typography>
+          <TextField 
+            label="Email"
+            type="email"
+            value={loginEmail}
+            onChange={(e) => setLoginEmail(e.target.value)}
+            required
+            sx={{ marginBottom: 2 }}
           />
-          <label>Contraseña:</label>
-          <input 
-            type="password" 
-            value={loginPassword} 
-            onChange={(e) => setLoginPassword(e.target.value)} 
-            required 
+          <TextField 
+            label="Contraseña"
+            type="password"
+            value={loginPassword}
+            onChange={(e) => setLoginPassword(e.target.value)}
+            required
+            sx={{ marginBottom: 2 }}
           />
-          <button type="submit">Iniciar sesión</button>
-          <md-filled-button onClick={handleGoogleLogin}>
-            <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" className="google-logo" />
+          <Button variant="contained" type="submit" sx={{ marginBottom: 2 }}>Iniciar sesión</Button>
+          <Button 
+            variant="contained" 
+            color="secondary" 
+            onClick={handleGoogleLogin}
+            startIcon={<img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" className="google-logo" />}
+            sx={{ marginBottom: 2 }}
+          >
             Iniciar sesión con Google
-          </md-filled-button>
-          <p>¿Olvidaste tu contraseña?</p>
-        </form>
-        <form className="signupForm" onSubmit={handleSignupSubmit}>
-          <h3>Regístrate</h3>
-          <label>Nombre:</label>
-          <input 
-            type="text" 
-            value={signupName} 
-            onChange={(e) => setSignupName(e.target.value)} 
-            required 
+          </Button>
+          <Typography variant="body2">¿Olvidaste tu contraseña?</Typography>
+        </Box>
+        <Box component="form" className="signupForm" onSubmit={handleSignupSubmit} sx={{ display: 'flex', flexDirection: 'column', width: 300, padding: 2, border: '1px solid #ccc', borderRadius: 1, backgroundColor: '#f9f9f9' }}>
+          <Typography variant="h6" sx={{ marginBottom: 2 }}>Regístrate</Typography>
+          <TextField 
+            label="Nombre"
+            type="text"
+            value={signupName}
+            onChange={(e) => setSignupName(e.target.value)}
+            required
+            sx={{ marginBottom: 2 }}
           />
-          <label>Apellidos:</label>
-          <input 
-            type="text" 
-            value={signupLastName} 
-            onChange={(e) => setSignupLastName(e.target.value)} 
-            required 
+          <TextField 
+            label="Apellidos"
+            type="text"
+            value={signupLastName}
+            onChange={(e) => setSignupLastName(e.target.value)}
+            required
+            sx={{ marginBottom: 2 }}
           />
-          <label>Correo:</label>
-          <input 
-            type="email" 
-            value={signupEmail} 
-            onChange={(e) => setSignupEmail(e.target.value)} 
-            required 
+          <TextField 
+            label="Correo"
+            type="email"
+            value={signupEmail}
+            onChange={(e) => setSignupEmail(e.target.value)}
+            required
+            sx={{ marginBottom: 2 }}
           />
-          <label>Contraseña:</label>
-          <input 
-            type="password" 
-            value={signupPassword} 
-            onChange={(e) => setSignupPassword(e.target.value)} 
-            required 
+          <TextField 
+            label="Contraseña"
+            type="password"
+            value={signupPassword}
+            onChange={(e) => setSignupPassword(e.target.value)}
+            required
+            sx={{ marginBottom: 2 }}
           />
-          <label>Repita su Contraseña:</label>
-          <input 
-            type="password" 
-            value={signupConfirmPassword} 
-            onChange={(e) => setSignupConfirmPassword(e.target.value)} 
-            required 
+          <TextField 
+            label="Repita su Contraseña"
+            type="password"
+            value={signupConfirmPassword}
+            onChange={(e) => setSignupConfirmPassword(e.target.value)}
+            required
+            sx={{ marginBottom: 2 }}
           />
-          <button type="submit">Registrarse</button>
-        </form>
-      </div>
-      {error && <p className="error">{error}</p>}
+          <Button variant="contained" type="submit">Registrarse</Button>
+        </Box>
+      </Box>
+      {error && <Typography variant="body2" color="error" sx={{ textAlign: 'center', marginTop: 2 }}>{error}</Typography>}
+      <Footer />
     </>
   );
 }

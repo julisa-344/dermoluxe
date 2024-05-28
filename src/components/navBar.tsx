@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
-import '@material/web/button/filled-button.js';
-import '@material/web/iconbutton/filled-icon-button.js';
-import '@material/web/icon/icon.js';
 import './componentStyles/navBar.css';
+import { IconButton } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function Nav() {
   return (
     <nav>
       <div className='Logo'>
-        <img src='/Vector.svg' alt='Logo' />
+        <Link to='/' aria-label='Home'><img src='/Vector.svg' alt="Logo" /></Link>
       </div>
       <div className='navMain'>
         <ul>
@@ -18,20 +19,21 @@ function Nav() {
         </ul>
       </div>
       <div className='right-icons'>
-        <Link to='#Profile' aria-label='Profile'>
-          <md-filled-icon-button>
-            <md-icon>Person</md-icon>
-          </md-filled-icon-button>
+        <Link to='/LoginSignup' aria-label='Login'>
+          <IconButton>
+            <PersonIcon />
+          </IconButton>
         </Link>
-        <md-filled-icon-button>
-          <md-icon>Search</md-icon>
-        </md-filled-icon-button>
-        <md-filled-icon-button>
-          <md-icon>Favorite</md-icon>
-        </md-filled-icon-button>
-        <md-filled-icon-button>
-          <md-icon>shopping_cart</md-icon>
-        </md-filled-icon-button>
+        <Link to='/' aria-label='Home'>
+          <IconButton>
+            <HomeIcon />
+          </IconButton>
+        </Link>
+        <Link to='/cart' aria-label='Cart'>
+          <IconButton>
+            <ShoppingCartIcon />
+          </IconButton>
+        </Link>
       </div>
     </nav>
   );

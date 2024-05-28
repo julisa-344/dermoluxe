@@ -1,0 +1,46 @@
+@import '../../theme.scss';
+.btn-common{
+    font-family: 'Manrope';
+    font-weight: bolder;
+    padding: 12px 0;
+    min-width: 200px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+
+}
+.btn-primary{
+    background-color: $color-primary;
+    font-family: 'Manrope';
+    font-weight: bolder;
+    color: $color-white;
+    padding: 12px 0;
+    min-width: 200px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color:$color-white;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+}
+.btn-outline{
+    background-color: $color-white;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;    
+}
+.switch-btn{
+    background-color: transparent;
+    border: none;
+    color: $color-neutral-600;
+}
+
+.switch-btn:hover{
+    color: $color-primary;
+    border: none;
+}
+
+.btn-primary:active {
+    border: 1px solid black;
+}
