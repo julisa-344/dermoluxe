@@ -5,6 +5,7 @@ import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth } from '../firebaseConfig';
 import '@material/web/button/filled-button.js';
 import './pagesStyles/loginSignup.css';
+import { Button } from '@mui/material';
 
 function LoginSignup() {
   const [loginEmail, setLoginEmail] = useState('');
@@ -82,10 +83,10 @@ function LoginSignup() {
             required 
           />
           <button type="submit">Iniciar sesión</button>
-          <md-filled-button onClick={handleGoogleLogin}>
+          <Button onClick={handleGoogleLogin}>
             <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" className="google-logo" />
             Iniciar sesión con Google
-          </md-filled-button>
+          </Button>
           <p>¿Olvidaste tu contraseña?</p>
         </form>
         <form className="signupForm" onSubmit={handleSignupSubmit}>
