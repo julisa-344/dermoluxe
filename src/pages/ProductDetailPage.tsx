@@ -25,7 +25,7 @@ function ProductDetailPage() {
             <main>
                 <section className="w-full flex m-4 product-detail">
                     <div className="w-50 flex justify-center">
-                        <img src="../public/img/product1.png" alt="" />
+                        <img src="../img/product1.png" alt="" />
                     </div>
                     <div className="contend-info-products">
                         <h2 className="title">ISDIN Fotoprotector Fusion</h2>
@@ -58,7 +58,7 @@ function ProductDetailPage() {
                             </div>
                             <div className='w-33 flex justify-center align-center '>
                                 <div>
-                                    <img className='w-full' src="../public/img/imginfa.png" alt="" />
+                                    <img className='w-full' src="../img/imginfa.png" alt="" />
 
                                 </div>
                             </div>
@@ -112,9 +112,9 @@ function ProductDetailPage() {
                 <h2 className='title m-4 text-center'>Productos que te pueden interesar</h2>
 
                 <section className='flex justify-around m-6'>
-                    <Card title='Product' price='s/. 76' img="../../public/img/product1.png" />
-                    <Card title='Product' price='s/. 76' img="../../public/img/product1.png" />
-                    <Card title='Product' price='s/. 76' img="../../public/img/product1.png" />
+                    <Card title='Product' price='s/. 76' img="../../img/product1.png" />
+                    <Card title='Product' price='s/. 76' img="../../img/product1.png" />
+                    <Card title='Product' price='s/. 76' img="../../img/product1.png" />
                 </section>
 
             </main>

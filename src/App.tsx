@@ -1,15 +1,21 @@
-import './App.css';
-import Nav from './components/navBar';
-import HomePage from './pages/HomePage';
-import Footer from './components/footer';
-import './theme.scss';
+import "./App.css";
+import React, { Suspense } from "react";
+import Nav from "./components/navBar";
+const HomePage = React.lazy(() => import("./pages/HomePage"));
+import Footer from "./components/footer";
+import "./theme.scss";
 
 function App() {
   return (
     <>
-      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300"
+        rel="stylesheet"
+      />
       <Nav />
-      <HomePage />
+      <Suspense fallback={<div>Loading...</div>}>
+        <HomePage />
+      </Suspense>
       <Footer />
     </>
   );

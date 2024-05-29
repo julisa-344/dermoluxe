@@ -4,7 +4,7 @@ import Button from '../components/button';
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleButtonClick = () => {
         navigate("/shop");
@@ -23,14 +23,14 @@ function HomePage() {
                 </div>
                 <div className='content-img'>
                     <div className='border-img'>
-                    <img className='img-hero' src="../../public/img/imghero.png" alt="" />
+                    <img className='img-hero' src="img/imghero.png" alt="" />
                     </div>
                 </div>
             </section>
             <section className='flex justify-around m-6'>
-                <Card  title='Product' price='s/. 76' img="../../public/img/product1.png"/>
-                <Card  title='Product' price='s/. 76' img="../../public/img/product1.png"/>
-                <Card  title='Product' price='s/. 76' img="../../public/img/product1.png"/>
+                <Card  title='Product' price='s/. 76' img="img/product1.png"/>
+                <Card  title='Product' price='s/. 76' img="img/product1.png"/>
+                <Card  title='Product' price='s/. 76' img="img/product1.png"/>
             </section>
             <section className='form-home'>
                 <h2 className='title color-white'>¿QUIERES SABER NUESTRAS NOTICIAS?</h2>
